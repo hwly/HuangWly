@@ -714,9 +714,52 @@ zrange key start stop
 
 
 
+### 与 python 交互
+
+#### 安装包
+
+安装 `Redis` 有 3 种方式：
+
+- 第一种：进入虚拟环境，联网安装包 `redis`
+
+  ```python
+  pip install redis
+  ```
+
+- 第二种：进入虚拟环境，联网安装 `redis`
+
+  ```
+  easy_install redis
+  ```
+
+- 第三种：到中文官网 - 客户端下载 `redis` 包的源码，使用源码安装
 
 
 
+#### 调用模块
+
+- 引入模块
+
+  ```python
+  from redis import *
+  ```
+
+- 这个模块中提供了 `StrictRedis` 对象（`Strict`严格），用于连接 redis 服务器，并按照不同类型提供了不同方法，进行交互操作。
+
+
+
+#### StrictRedis 对象方法
+
+- 通过 init 创建 对象，指定参数 host、post 与指定的服务器和端口连接，host 默认为 localhost，port 默认为 6379，db 默认为 0
+
+  ```python
+  sr = StrictRedis(host='localhost', port=6379, db=0)
+  
+  简写为：
+  sr = StrictRedis()
+  ```
+
+  
 
 
 
