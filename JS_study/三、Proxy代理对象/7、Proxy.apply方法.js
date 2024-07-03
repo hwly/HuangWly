@@ -86,7 +86,7 @@ ld.proxy = function proxy(obj, objName) {
                 result = Reflect.apply(target, thisArg, argumentsList);
                 let type = ld.getType(result);
                 if(result instanceof Object){
-                    console.log(`{apply|function:[${objName}],type:[${result}]}`);
+                    console.log(`{apply|function:[${objName}],type:[${type}]}`);
                 }else if(typeof result === "symbol"){
                     console.log(`{apply|function:[${objName}],result:[${result.toString()}]}`);
                 }else{
