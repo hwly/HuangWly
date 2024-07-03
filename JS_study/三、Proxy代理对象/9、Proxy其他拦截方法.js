@@ -5,6 +5,8 @@
 // getPrototypeOf:  当读取代理对象的原型时，该方法就会被调用
 // setPrototypeOf:  当设置对象原型时，该方法就会被调用
 
+// 连接：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
+
 
 ld = {};
 ld.config = {};
